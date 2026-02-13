@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* */
+.titulo {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    padding: 10px;
+    color: white
+}
+
+.navbar {
+    padding: 1 rem 1rem;
+    margin: 20px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.menu {
+    width: auto;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: stretch;
+
+}
+
+.menu img {
+    width: 2vw
+}
+
+.menu a {
+    display: flex;
+    align-items: flex-start;
+    gap:15px;
+}
+
+.navbar input {
+    width: 15vw;
+    border-radius: 10px;
+
+
+}
+
+.bann1 {
+    padding: 3rem 3rem; 
+    display: flex;
+}
