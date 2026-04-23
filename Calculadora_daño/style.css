@@ -20,6 +20,11 @@ body::before {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;  
+    display: flex; 
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
 }
 .intro {
     display:flex;
@@ -29,13 +34,6 @@ body::before {
     color: aliceblue;
     font-family: Trajan Pro;}
 
-.juego {
-    display: flex; 
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px;
-    }
 
 .stats {
     display: flex; 
