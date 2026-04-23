@@ -39,7 +39,7 @@ body::before {
     gap:10px;
     margin: 10px auto;
     max-height: 90px;
-    max-width: 600px;
+    max-width: 400px;
     width: 100%;
     
     }
@@ -112,7 +112,7 @@ body::before {
     margin: 10px auto;
     margin-bottom: 0;
     border: 10px solid rgb(0, 0, 0);
-    max-width: 600px;
+    max-width: 400px;
     align-items: center;  
 }
 
