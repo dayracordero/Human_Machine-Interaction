@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+   
+    <div class="intro">
+        <h1>¡Derrota a la Moscabestia!</h1>
+    </div>
+    
+      
+    <section class="juego">
+        <div class="stats">
+            <div class="jugador_stats">
+                <img src="https://i.redd.it/since-a-lot-of-people-using-this-hornet-pfp-i-made-one-for-v0-42io5evve2mf1.jpg?width=1500&format=pjpg&auto=webp&s=da94707ab370afe2ac29d43911f768f5c3ac205e" alt="">
+                
+                <div class="stats_col_1">
+                    <h3>Hornet</h3>
+                    <label for="health_p">Vida:</label>
+                    <progress id="health_p" value="200" max="200"></progress>
+                </div>
+            </div>
+
+            <div class="mosca_stats">
+                <img src="https://e4z6bdbogrg.exactdn.com/wp-content/uploads/2025/10/image-4.png?strip=all&quality=90&webp=90&avif=90" alt="">
+                <div class="stats_col_2">
+                    <h3>Moscabestia Salvaje</h3>
+                    <label for="health_e">Vida:</label>
+                    <progress id="health_e" value="100" max="100"></progress>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div class="campobatalla">
+            <img src="https://preview.redd.it/wallpapers-from-far-fields-spoilers-ahead-v0-6x35gwg1gpsf1.png?width=640&crop=smart&auto=webp&s=7e59f488387cb8a2e3bcf4ad556adbab35e022d7" alt="" id="fondo">
+            <img src="horny.gif" alt="" class="horny">
+            <img src="hornyattack.gif" alt="" class="hornyattack">
+            <img src="mosca.png" alt="" class="mosca">
+            <button onclick="ataquehorny()" id="botonataque">Atacar</button>
+            <div id="puntos"> Puntuación: <span id="puntuacion">0</span></div>
+            <div id="victoria">¡Has Derrotado a la Moscabestia!</div>
+            <div id="derrota">¡Has muerto!</div>
+        </div>
+
+       
+    </section>
+
+
+    <div class="extras"> 
+        <button onclick="reiniciar()" id="botonreinicio">Reiniciar</button>
+    </div>
+
+    <script src = "function.js"></script>
+</body>
+
+</html>
