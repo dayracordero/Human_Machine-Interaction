@@ -1,0 +1,293 @@
+* {
+    font-family:trajan pro;
+}
+
+body button:hover {color: rgb(231, 33, 33); transform: scale(1.1);}
+
+
+.head {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 60px 20px 60px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+}
+
+.izq {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.izq input {
+    border-radius: 15px;
+    padding: 2px 15px 0px  ;
+    border: 1px solid black
+}
+
+.der {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.der button {
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    padding: 5px 5px 0px 5px;
+    transition: transform 0.3s ease;}
+
+
+.der a {
+    margin: 0;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+#ban_1 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+#info-ban-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+#ban_1 h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+#ban_1::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 6, 12, 0.75),
+        rgba(135, 113, 138, 0.3)
+    );
+    pointer-events: none;
+}
+
+.tarjetas {
+    display: flex; 
+    flex-direction: column;
+    position: relative;}
+
+.tarjetas_text {
+    display: flex; 
+    padding: 60px 60px 10px 60px;
+    gap:10px;
+    flex-direction: column;
+    text-align: center;
+    }
+.tarjetas_text p {font-family: 'Courier New', Courier, monospace;}
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    padding: 60px;
+    transition: transform 0.5s ease;
+    gap: 25px;
+}
+
+.card_art {
+    min-width: 50%;
+    height: 450px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.card_text {
+    display: flex; 
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;}
+
+.card_text span {font-weight: 600;}
+.card_text p {font-family: 'Courier New', Courier, monospace;}
+
+#card_1, #card_2, #card_3 {
+    width: 100%;
+    height: 400px;
+}
+
+.can {
+    flex: 1;
+    width: 100%;
+}
+.nav {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    font-size: 40px;
+    z-index: 10;
+}
+.nav:hover { 
+    color: rgb(231, 33, 33);
+    transform: translateY(-50%) scale(1.1);
+}
+.left { left: 10px; }
+.right { right: 10px; }
+
+.about {
+    display: flex; 
+    margin-bottom:60px ;
+    padding: 30px; 
+    background-color: rgb(156, 156, 156);}
+.about_text {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;}
+
+.about_text p {font-family: 'Courier New', Courier, monospace;}
+
+.about_sus {display: flex; align-items: center; gap: 10px;}
+
+.about_sus input { border-radius: 15px; font-family: 'Courier New', Courier, monospace;
+    padding: 2px 15px 0px  ;
+    border: 1px solid black}
+.about_sus button {background-color: black; color: white;}
+
+
+/* las flipcards de artistas */
+.artistas {
+    display: flex; 
+    flex-direction: column;
+    padding: 60px;
+}
+.cards {
+    display: flex; 
+    gap: 10px; 
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;}
+.flip-card {
+    width: 300px;
+    height: 400px;
+    margin-top: 20px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+
+.flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    text-align: center;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.flip-front {
+    background: #111;
+    color: white;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.flip-back {
+    background: #1c1c1c;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+.flip-back p {font-family: 'Courier New', Courier, monospace;}
+
+/* FOOTER */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 60px 40px 20px 40px;
+    margin-top: 80px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.footer p {font-family: 'Courier New', Courier, monospace;}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer_col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.footer_col h3,
+.footer_col h4 {
+    margin-bottom: 10px;
+}
+
+.footer_col a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer_col a:hover {
+    color: rgb(231, 33, 33);
+    transform: translateX(5px);
+}
+
+.footer_bottom {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
