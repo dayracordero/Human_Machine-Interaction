@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="top_bar" v-if="showtop_bar">
+            <i class="bx bx-purchase-tag"></i>
+            <span>50% Descuento por Tiempo Limitado!</span>
+            <a href="#"> Compra Ahora</a>
+            <button @click="closeTop_bar">x</button>
+        </div>
+
+        <div class="header">
+            <img src="https://thumbs.dreamstime.com/b/icono-del-glifo-negro-de-contrabando-drogas-tr%C3%A1fico-ilegal-mercado-distribuci%C3%B3n-il%C3%ADcita-sustancias-s%C3%ADmbolo-silueta-en-espacio-239298275.jpg"
+                alt="" width="50px">
+            <div class="header_refs">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Product</a>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="header_icons">
+                <a href="#"><i class='bx bx-search'></i></a>
+                <a href="#"><i class='bx bx-user-circle'></i></a>
+                <a href="#"><i class='bx bx-heart'></i></a>
+                <a href="#" class="cart_icon">
+                    <i class='bx bx-shopping-bag'></i>
+                    <span class="cart_count" v-if="exist_product">{{cart_count}}</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero">
+            <div class="hero_text">
+                <span>Home <i>›</i> <strong>Shop</strong></span>
+                <h1>Shop Page</h1>
+                <h3>Let's design the place you always imagined.</h3>
+            </div>
+        </div>
+
+        <div class="Shop_section">
+
+            <div class="shop_bar">
+                <div class="shop_bar_izq">
+                    <div class="categories">
+                        <label>CATEGORIES</label>
+                        <select v-model="selectedCategory">
+                            <option value="all">All</option>
+                            <option value="stimul">Stimulants</option>
+                            <option value="depre">Depressants</option>
+                            <option value="Hallo">Hallucinogens</option>
+                        </select>
+                    </div>
+
+                    <div class="prices">
+                        <label>PRICES</label>
+                        <select v-model="selectedPrice">
+                            <option value="0">All</option>
+                            <option value="0-20">$0 - $20</option>
+                            <option value="20-100">$20 - $100</option>
+                            <option value="100+">$100+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="toolbar-right">
+                    <div class="sort-box">
+                        <span>Sort by</span>
+                        <i class='bx bx-chevron-down'></i>
+                    </div>
+
+                    <div class="view-switch">
+                        <button><i class='bx bxs-grid'></i></button>
+                        <button><i class='bx bx-grid-alt'></i></button>
+                        <button class="active"><i class='bx bx-pause'></i></button>
+                        <button><i class='bx bx-menu'></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="products_section">
+            <div class="products" v-for="product in visibleProducts">
+                <div class="image_p">
+                    <span class="new_badge" v-if="product.isNew">NEW</span>
+                    <span class="discount_badge" v-if="product.discount">-{{product.discount}}%</span>
+                    <img :src="product.image" alt="">
+                </div>
+                <div class="info_p">
+                    <div class="stars">★★★★★</div>
+                    <div class="name_p">
+                        <h3>{{product.name}}</h3>
+                        <button @click ="AddWhislist"><i class='bx bx-heart'></i></button>
+                    </div>
+                    <div class="precio_p">
+                        <span class="current_price">${{ product.price }}</span>
+                        <span class="old_price" v-if="product.Oldprice">${{ product.Oldprice }}</span>
+                    </div>
+
+                    <p class="description">{{ product.description }}</p>
+
+                    <button class="btn-cart" @click="AddCart(product)">Add to cart</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <div class="form_email">
+        <form>
+            <div class="form_text">
+                <h1>Join our Newsletter</h1>
+                <p>Sign up for deals, new products and promotions </p>
+                <div class="input_form">
+                    <input type="text" placeholder="Email address">
+                    <button>Sign Up </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="foot_izq">
+            <h2>DRUGS |</h2>
+            <a href="#">Gift & Decoration Store</a>
+        </div>
+        <div class="foot_der">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Product</a>
+            <a href="#">Contact us</a>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
